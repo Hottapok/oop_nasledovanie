@@ -1,12 +1,12 @@
-package Pet;
+package pet;
 
 public abstract class Animal {
     protected String name ;
     protected String year;
 
     public Animal(String name, String year) {
-        this.name = name;
-        this.year = year;
+        setName(name);
+        setYear(year);
     }
 
     public String getName() {
@@ -14,7 +14,7 @@ public abstract class Animal {
     }
 
     public void setName(String name) {
-        if (name!= null || name.isEmpty() || name.isBlank()){
+        if (name!= null || name.isBlank()){
             this.name = name;
         }else {
             this.name="Не верные данные";
@@ -26,7 +26,7 @@ public abstract class Animal {
     }
 
     public void setYear(String year) {
-        if (year!= null || year.isEmpty() || year.isBlank()){
+        if (year!= null || year.isBlank()){
             this.year = year;
         }else {
             this.year="Не верные данные";
@@ -34,9 +34,8 @@ public abstract class Animal {
     }
     public abstract  void eat();
 
-    public static void sleep(){
+    public abstract void sleep() ;
 
-    }
     public abstract  void go();
 
 }

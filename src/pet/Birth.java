@@ -1,11 +1,11 @@
-package Pet;
+package pet;
 
 public class Birth extends Animal{
      protected String livingEnvironment;
 
     public Birth(String name, String year, String livingEnvironment) {
         super(name, year);
-        this.livingEnvironment = livingEnvironment;
+        setLivingEnvironment(livingEnvironment);
     }
 
     public String getLivingEnvironment() {
@@ -13,7 +13,7 @@ public class Birth extends Animal{
     }
 
     public void setLivingEnvironment(String livingEnvironment) {
-        if (livingEnvironment!= null || livingEnvironment.isEmpty() || livingEnvironment.isBlank()){
+        if (livingEnvironment!= null || livingEnvironment.isBlank()){
             this.livingEnvironment = livingEnvironment;
         }else {
             this.livingEnvironment="Не верные данные";
@@ -22,14 +22,22 @@ public class Birth extends Animal{
 
     @Override
     public void eat() {
+        System.out.println("Птичка кушает");
+
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Птичка спит");
 
     }
 
     @Override
     public void go() {
-
+        System.out.println("Птичка летает");
     }
     public void hunting(){
+        System.out.println("Птичка охотится");
 
     }
 }

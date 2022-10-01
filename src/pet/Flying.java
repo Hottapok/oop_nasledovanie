@@ -1,4 +1,4 @@
-package Pet;
+package pet;
 
 public class Flying extends Birth{
     private String typeOfMovement;
@@ -6,6 +6,7 @@ public class Flying extends Birth{
     public Flying(String name, String year, String livingEnvironment, String typeOfMovement) {
         super(name, year, livingEnvironment);
         this.typeOfMovement = typeOfMovement;
+
     }
 
     public String getTypeOfMovement() {
@@ -14,14 +15,15 @@ public class Flying extends Birth{
 
     @Override
     public void eat() {
-        super.eat();
+        System.out.println("Летающая птичка кушает");
     }
 
     @Override
     public void go() {
-        super.go();
+        System.out.println("Двигается");
     }
     public void fly(){
+        System.out.println("Летает");
 
     }
     @Override

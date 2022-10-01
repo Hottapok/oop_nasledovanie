@@ -1,4 +1,4 @@
-import Pet.*;
+import pet.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,25 +7,25 @@ public class Main {
         Car car3 = new Car("BMW", "Z8", 3.0, "Black", 2021, "Germany", "Бензин", "Auto", null, "aasasss6122", 7, "Лето", 220);
         Car car4 = new Car("KIA", "Sportage", 2.4, "Red", 2018, "South Korea", "Бензин", "Auto", null, "a154aa455", 4, "Лето", 200);
         Car car5 = new Car("Hyundai", "Avante", 1.6, "Orange", 2016, "South Korea", "Бензин", "Auto", null, "asa4561aa", 8, "Лето", 170);
-        getInfoAboutCar(car1);
-        getInfoAboutCar(car2);
-        getInfoAboutCar(car3);
-        getInfoAboutCar(car4);
-        getInfoAboutCar(car5);
+        infoAboutCar(car1);
+        infoAboutCar(car2);
+        infoAboutCar(car3);
+        infoAboutCar(car4);
+        infoAboutCar(car5);
         Train train1 = new Train("Ласточка", "В-901", 2011, "Россия",
                 null, 301, "Дизель", "3500", null, "Белорусский вокзал",
                 "Минск-пассажирский", "11");
         Train train2 = new Train("Ленинград", "D-125", 2019, "Россия",
                 null, 270, "Дизель", "1700", null, "Ленинградский вокзал",
                 "Ленинград-пассажирский", "8");
-        getInfoAboutTrain(train1);
-        getInfoAboutTrain(train2);
+        infoAboutTrain(train1);
+        infoAboutTrain(train2);
         Bus bus1 = new Bus("Икарус", "123", 1987, "СССР", "Желтый", 150, "Дизель");
         Bus bus2 = new Bus("Лиаз", "885", 1977, "СССР", "Красный", 110, "Дизель");
         Bus bus3 = new Bus("ПАЗ", "111", 1991, "СССР", "Белый", 150, "Дизель");
-        getInfoAboutBus(bus1);
-        getInfoAboutBus(bus2);
-        getInfoAboutBus(bus3);
+        infoAboutBus(bus1);
+        infoAboutBus(bus2);
+        infoAboutBus(bus3);
 
         train1.refill();
         bus1.refill();
@@ -74,7 +74,7 @@ public class Main {
         System.out.println(falcon.toString());
     }
 
-    public static void getInfoAboutCar(Car car) {
+    private static void infoAboutCar(Car car) {
         System.out.println(car.getBrand() + " " + car.getModel() + " " + ",год выпуска " + car.getYear()
                 + " ," + "цвет кузова " + car.getColor() + " ," + "место сборки " + car.getCountry() +
                 " ," + "объем двигателя " + car.getEngine() + ", коробка передач " + car.getTransmission() +
@@ -82,14 +82,14 @@ public class Main {
                 car.getNumberOfSeats() + ", резина " + car.getTire() + " ,Максимальная скорость " + car.getMaxSpeed() + " ,тип топлива " + car.fuel);
     }
 
-    public static void getInfoAboutTrain(Train train) {
+    private static void infoAboutTrain(Train train) {
         System.out.println("Поезд " + train.brand + " ,модель " + train.getModel() + " ,год выпуска " + train.getYear()
                 + " ,страна производства " + train.getCountry() + " ,тип топлива " + train.fuel + " ,цвет " + train.getColor() + " ,скорость передвижения "
                 + train.getMaxSpeed() + " км/ч" + " , отходит от " + train.getDepartureOfStation() + " и следует до станции "
                 + train.getEndStation() + ".Цена поездки " + train.getPriceOfTrip() + " ,в поезде " + train.getNumberOfWagons() + " вагонов.");
     }
 
-    public static void getInfoAboutBus(Bus bus) {
+    private static void infoAboutBus(Bus bus) {
         System.out.println("Автобус " + bus.getBrand() + " ,модель " + bus.getModel()
                 + " ,год выпуска " + bus.getYear() + " ,страна производства " + bus.getCountry()
                 + " , цвет кузова " + bus.getColor() + " ,максимальная скорость " + bus.getMaxSpeed() + " км/ч " + ", тип топлива " + bus.fuel);

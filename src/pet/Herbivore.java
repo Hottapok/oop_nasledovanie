@@ -1,11 +1,11 @@
-package Pet;
+package pet;
 
 public class Herbivore extends Mammal {
     private String food;
 
     public Herbivore(String name, String year, String livingEnvironment, String speed, String food) {
         super(name, year, livingEnvironment, speed);
-        this.food = food;
+        setFood(food);
     }
 
     public String getFood() {
@@ -13,7 +13,7 @@ public class Herbivore extends Mammal {
     }
 
     public void setFood(String food) {
-        if (food != null || !food.isBlank() || !food.isEmpty()) {
+        if (food != null || !food.isEmpty()) {
             this.food = food;
         } else {
             this.food = "Не верные данные";
@@ -22,21 +22,21 @@ public class Herbivore extends Mammal {
 
     @Override
     public void eat() {
-        super.eat();
+        System.out.println("Кушает травку");
     }
 
     @Override
     public void go() {
-        super.go();
+        System.out.println("Бегает");
     }
 
     @Override
     public void walk() {
-        super.walk();
+        System.out.println("Гуляет");;
     }
 
-    public void graze() {
-
+    public void pasture() {
+        System.out.println("Пасется");
     }
 
     @Override
